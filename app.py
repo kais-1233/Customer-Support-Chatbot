@@ -27,7 +27,7 @@ with open("intents.json", "r", encoding="utf-8") as f:
 # Streamlit UI setup
 # ----------------------------
 st.set_page_config(page_title="Flipkart Customer Support Bot", page_icon="")
-st.title("Flipkart Customer Support Bot")
+st.title("Flipkart Customer Support ChatBot")
 st.markdown("Type your query below. The bot will respond based on trained intents.")
 
 # ----------------------------
@@ -52,18 +52,55 @@ def get_response(user_input):
             resp = random.choice(intent.get("responses", ["Sorry, I couldn't find an answer."]))
             return f"**Bot:** {resp}"
 
-# ----------------------------
-# Streamlit user input
-# ----------------------------
+ 
 
+
+
+# --- Initialize chat history ---
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
+
+if "user_input" not in st.session_state:
+    st.session_state.user_input = ""
+
+# --- Chat container with fixed height and scroll ---
+chat_container = st.container()
+chat_height = 400  # height in pixels
+
+# --- Display chat inside scrollable div ---
+def display_chat():
+    chat_html = "<div style='height:{}px; overflow-y: auto; border:1px solid #ddd; padding:10px;'>".format(chat_height)
+    for sender, msg in st.session_state.chat_history:
+        if sender == "You":
+            chat_html += f"<p><b style='color:blue'>{sender}:</b> {msg}</p>"
+        else:
+            chat_html += f"<p><b style='color:green'>{sender}:</b> {msg}</p>"
+    chat_html += "</div>"
+    st.markdown(chat_html, unsafe_allow_html=True)
+
+# --- Text input ---
 user_input = st.text_input(
     "You:",
-    placeholder="Ask me about order, return,exchange,refund...",
+    placeholder="Ask me about order, return, exchange, refund...",
+    key="user_input"
 )
 
-if st.button("**Send**") and user_input:
-    response = get_response(user_input)
-    st.markdown(response)
+# --- Send button ---
+def send_message():
+    if st.session_state.user_input.strip():
+        response = get_response(st.session_state.user_input)
+        st.session_state.chat_history.append(("You", st.session_state.user_input))
+        st.session_state.chat_history.append(("Bot", response))
+        st.session_state.user_input = ""  # clear input
 
-if st.button("**Clear Chat**"):
-    st.experimental_rerun()
+st.button("Send", on_click=send_message)
+
+# --- Clear chat button ---
+def clear_chat():
+    st.session_state.chat_history = []
+    st.session_state.user_input = ""
+
+st.button("Clear Chat", on_click=clear_chat)
+
+# --- Render chat ---
+display_chat()
