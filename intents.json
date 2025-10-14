@@ -1,0 +1,92 @@
+{
+  "intents": [
+    {"tag":"greeting","patterns":["Hi","Hello","Hey","Namaste","Hii","Hii","Good morning","Good evening"],
+     "responses":["Hello! Welcome to Flipkart Support. How can I help you today?","Hi there! What can I do for you?"]},
+
+    {"tag":"goodbye","patterns":["Bye","by","Goodbye","See you","Catch you later"],
+     "responses":["Goodbye! Have a great day!","See you soon! "]},
+
+    {"tag":"thanks","patterns":["Thanks","Thank you","Shukriya","Thnx","Thanks a lot"],
+     "responses":["You're welcome! ","Happy to help!"]},
+
+    {"tag":"order_status","patterns":["Where is my order?","Track my order","Order status","Mera order kahan h","Order kab aayega","Order kab tak aayega"],
+     "responses":["Please share your Order ID to check the current status.","Can you give me your Order ID so I can track it for you?"]},
+
+    {"tag":"cancel_order","patterns":["Cancel my order","Order cancel karo","Cancel order","Mera order radd karo","I don't want my order"],
+     "responses":["Please provide your Order ID so I can process the cancellation.","Sure, share your Order ID and I’ll start the cancellation process."]},
+
+    {"tag":"delivery_delay","patterns":["My delivery is late","Mera order nhi aaya","delivery late","Order delay ho gaya","Package not delivered yet","Delivery taking too long"],
+     "responses":["I’m sorry for the delay  Please share your Order ID so I can check the new delivery date."]},
+
+    {"tag":"return_policy","patterns":["How to return a product","return","Return policy","return kaise kare","Product wapas kaise kare","Return request kaise banaye"],
+     "responses":["Our return policy allows returns within 7 days of delivery. Do you want me to start a return request for you?"]},
+
+    {"tag":"refund_status","patterns":["Refund kab milega","Where is my refund","Refund status","Mera paisa kab aayega","refund"],
+     "responses":["Refunds are processed within 5-7 business days after the return is picked up. Do you want me to check your refund status?"]},
+
+    {"tag":"emi_options","patterns":["EMI options","Pay in installments","Monthly payment available","Installment plan"],
+     "responses":["We offer EMI on credit/debit cards and selected products. Would you like me to check EMI availability for your product?"]},
+
+    {"tag":"discounts","patterns":["Available coupons","Any offers?","Discount code","Promo code","Sale kab lagegi"],
+     "responses":["You can find all ongoing offers in the 'Offers Zone' section of our app. Would you like me to share the latest deals?"]},
+
+    {"tag":"store_locator","patterns":["Nearest Flipkart store","Flipkart store location","Shop address","Physical store near me"],
+     "responses":["Please share your city or pincode so I can find the nearest Flipkart store for you."]},
+
+    {"tag":"app_help","patterns":["App not working","Flipkart app crash","App help","App kaise use kare"],
+     "responses":["You can reinstall the Flipkart app from Play Store/App Store. If issues continue, please clear the cache or contact support."]},
+
+    {"tag":"complaint","patterns":["I want to complain","Complaint register karo","Service bad hai","Product damaged aaya"],
+     "responses":["I'm sorry you faced an issue. Please tell me your Order ID and issue details so I can register a complaint."]},
+
+    {"tag":"product_search","patterns":["Search phone under 15000","Find red shoes","Laptop under 50k","Mobile 5G dikhaiye","Hinglish query yahan"],
+     "responses":["Searching for your product...  Please wait while I find the best options."]},
+
+    {"tag":"smalltalk","patterns":["How are you?","Kya haal hai","What's up","How's your day"],
+     "responses":["I'm great, thank you! How can I assist you today?"]},
+
+    {"tag":"fallback","patterns":[],"responses":["I'm not sure I understood. Can you rephrase? You can ask me about orders, returns, refunds, complaints, or product searches."]},
+
+    {"tag":"change_address","patterns":["How can I change my delivery address?","Wrong address entered","Can I update my shipping address?","change delivery adress","Address change karna hai","Galat address ho gaya"],
+     "responses":["You can change the address before shipment from 'My Orders' → 'Edit Address'. Once shipped, contact support."]},
+
+    {"tag":"exchange_item","patterns":["Can I exchange this item?","Size exchange chahiye","How do I replace a product?","Exchange policy?","Wrong size received","order exchange","items exchange"],
+     "responses":["Exchange is available for eligible items within 7 days. Go to 'My Orders' → 'Exchange' and pick your size."]},
+
+    {"tag":"warranty","patterns":["Is there any warranty?","warranty","Warranty details?","How to claim warranty?","Product warranty kitni hai","Warranty claim kaise karu"],
+     "responses":["Warranty varies by brand. Check the product page under 'Warranty' or contact brand service center with your invoice."]},
+
+    {"tag":"order_modify","patterns":["Can I change the product after ordering?","Modify my order","Color/size change after order","Order ko edit karna hai","Can I add another item to the same order?"],
+     "responses":["Orders cannot be modified once placed. You can cancel and place a new order if it hasn't shipped yet."]},
+
+    {"tag":"out_of_stock","patterns":["When will this be in stock?","Product out of stock","Stock kab aayega","Notify me for availability","Back in stock alerts"],
+     "responses":["Tap 'Notify Me' on the product page to get an alert as soon as it’s back in stock."]},
+
+    {"tag":"account_help","patterns":["I can't login","Forgot password","OTP not coming","Account access problem","Sign in issue","login problem"],
+     "responses":["Use 'Forgot Password' to reset your password. If OTP delays persist, check network/SMS settings or try email login."]},
+
+    {"tag":"contact_support","patterns":["Talk to a human","Need to contact support","Customer care number?","Live agent please","Call karna hai support ko"],
+     "responses":["You can reach support from the Help Center → 'Contact Us' for chat/call-back options."]},
+
+    {"tag":"app_issue","patterns":["App not working","Website is slow","Cart not updating","Payment page stuck","App crash ho rha"],
+     "responses":["Please update the app, clear cache, and retry. If the issue continues, share a screenshot via Help Center."]},
+
+    {"tag":"product_info","patterns":["Does this phone support 5G?","What are the specs?","Material kya hai","Is it waterproof?","Size guide please"],
+     "responses":["Please check the 'Product Details' section for full specifications, or ask a specific question about the item."]},
+
+    {"tag":"shipping_charges","patterns":["Delivery charges kitne hain","delivery charge","Is shipping free?","Any delivery fee?","Minimum order for free delivery?","Shipping cost?"],
+     "responses":["Shipping charges vary by product and location. See the order summary at checkout for exact charges."]},
+
+    {"tag":"order_undelivered","patterns":["Marked delivered but not received","Package missing","Order not delivered","Delivery ho gaya par parcel nahi mila","Item not received yet"],
+     "responses":["Sorry about that. Please check with neighbors/security and raise 'Item Not Received' from 'My Orders' for investigation."]},
+
+    {"tag":"gst_invoice","patterns":["GST invoice chahiye","Download invoice","Tax invoice kaise milega","Invoice copy please","Can I add GST number?"],
+     "responses":["Add your GSTIN under 'Profile' → 'Business' before ordering. Download invoices from 'My Orders' after delivery."]},
+
+    {"tag":"replace_damaged","patterns":["Damaged product received","Broken item delivered","Item defective hai","How do I raise a replacement?","Dead on arrival"],
+     "responses":["Initiate a replacement within 7 days from 'My Orders' with photos/video of the defect."]},
+
+    {"tag":"feedback","patterns":["I want to give feedback","Share suggestion","Complain karna hai","How to rate my experience?","Where can I review the product?"],
+     "responses":["We value feedback! Rate products from 'My Orders' and share suggestions via Help Center → 'Feedback'."]}
+  ]
+}

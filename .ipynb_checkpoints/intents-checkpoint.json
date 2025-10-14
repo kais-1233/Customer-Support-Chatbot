@@ -1,0 +1,74 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Namaste", "Hii", "Good morning", "Good evening"],
+      "responses": ["Hello! 👋 Welcome to Flipkart Support. How can I help you today?", "Hi there! What can I do for you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you", "Catch you later"],
+      "responses": ["Goodbye! Have a great day!", "See you soon! 👋"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Shukriya", "Thx", "Thanks a lot"],
+      "responses": ["You're welcome! 😊", "Happy to help!"]
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["Where is my order?", "Track my order", "Order status", "Mera order kahan h", "Order kab aayega"],
+      "responses": ["Please share your Order ID to check the current status.", "Can you give me your Order ID so I can track it for you?"]
+    },
+    {
+      "tag": "cancel_order",
+      "patterns": ["Cancel my order", "Order cancel karo", "Mera order radd karo", "I don't want my order"],
+      "responses": ["Please provide your Order ID so I can process the cancellation.", "Sure, share your Order ID and I’ll start the cancellation process."]
+    },
+    {
+      "tag": "delivery_delay",
+      "patterns": ["My delivery is late", "Order delay ho gaya", "Package not delivered yet", "Delivery taking too long"],
+      "responses": ["I’m sorry for the delay 😔 Please share your Order ID so I can check the new delivery date."]
+    },
+    {
+      "tag": "return_policy",
+      "patterns": ["How to return a product", "Return policy", "Product wapas kaise kare", "Return request kaise banaye"],
+      "responses": ["Our return policy allows returns within 7 days of delivery. Do you want me to start a return request for you?"]
+    },
+    {
+      "tag": "refund_status",
+      "patterns": ["Refund kab milega", "Where is my refund", "Refund status", "Mera paisa kab aayega"],
+      "responses": ["Refunds are processed within 5-7 business days after the return is picked up. Do you want me to check your refund status?"]
+    },
+    {
+      "tag": "emi_options",
+      "patterns": ["EMI options", "Pay in installments", "Monthly payment available", "Installment plan"],
+      "responses": ["We offer EMI on credit/debit cards and selected products. Would you like me to check EMI availability for your product?"]
+    },
+    {
+      "tag": "discounts",
+      "patterns": ["Available coupons", "Any offers?", "Discount code", "Promo code", "Sale kab lagegi"],
+      "responses": ["You can find all ongoing offers in the 'Offers Zone' section of our app. Would you like me to share the latest deals?"]
+    },
+    {
+      "tag": "store_locator",
+      "patterns": ["Nearest Flipkart store", "Flipkart store location", "Shop address", "Physical store near me"],
+      "responses": ["Please share your city or pincode so I can find the nearest Flipkart store for you."]
+    },
+    {
+      "tag": "app_help",
+      "patterns": ["App not working", "Flipkart app crash", "App help", "App kaise use kare"],
+      "responses": ["You can reinstall the Flipkart app from Play Store/App Store. If issues continue, please clear the cache or contact support."]
+    },
+    {
+      "tag": "complaint",
+      "patterns": ["I want to complain", "Complaint register karo", "Service bad hai", "Product damaged aaya"],
+      "responses": ["I'm sorry you faced an issue. Please tell me your Order ID and issue details so I can register a complaint."]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": ["I'm not sure I understood. Can you rephrase? You can ask me about orders, returns, refunds, complaints, or product searches."]
+    }
+  ]
+}
