@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: Customer-Support-Chatbot-1  
+    env: python
+    pythonVersion: 3.12.0
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py   
